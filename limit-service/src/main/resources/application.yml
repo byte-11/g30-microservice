@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: limit-service
+
+  config:
+    import: optional:configserver:http://localhost:8888
+    name: config-server
+
+  cloud:
+    config:
+      profile: staging
+
+limit-service:
+  minimum: 5
+  maximum: 995
